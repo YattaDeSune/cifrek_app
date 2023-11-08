@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Loader from "./components/loader";
+import GetCodePage from "./components/getCodePage";
+import {useState} from "react";
+import Autorization from "./components/autorization";
+import {BrowserRouter as Routes, Link, Route} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [loading, setLoading] = useState(false)
+  
+    return (
+        <>
+            <div>
+                {loading && <Loader />}
+                <Autorization />
+            </div>
+
+            <Routes>
+                <Route path='/' element={<Loader />} />
+                <Route path='/code' element={<GetCodePage />} />
+            </Routes>
+        </>
+    );
 }
 
 export default App;
