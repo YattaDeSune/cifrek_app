@@ -1,0 +1,25 @@
+.container {
+    flex-direction: column;
+    height: 844px;
+    width: 390px;
+}
+
+.loader_container {
+    height: 753px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 91px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.line {
+    margin-bottom: 29px;
+}

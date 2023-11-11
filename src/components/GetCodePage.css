@@ -1,0 +1,95 @@
+.container {
+    flex-direction: column;
+    height: 844px;
+    width: 390px;
+}
+
+.autorizationContainer {
+    height: 753px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.codeInput {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.codeElement {
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #14904C;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+    width: 52px;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text {
+    display: flex;
+    width: 250px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.getCodeBtn_2 {
+    display: inline-flex;
+    padding: 13px 61px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 10px;
+    background: #14904C;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.50);
+    margin-top: 40px;
+}
+
+.textBtn {
+    color: #FFF;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer {
+    height: 91px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.line {
+    margin-bottom: 24px;
+}
+
+.textError {
+    color: red;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
