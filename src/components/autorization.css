@@ -1,0 +1,77 @@
+.container {
+    flex-direction: column;
+    height: 844px;
+    width: 390px;
+}
+
+.autorizationContainer {
+    height: 753px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 35px;
+}
+
+.getCodeBtn {
+    display: inline-flex;
+    padding: 13px 118px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #14904C;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+}
+
+.textBtn {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer {
+    height: 91px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.line {
+    margin-bottom: 24px;
+}
+
+.textError {
+    color: red;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.inputMail {
+    width: 339px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #14904C;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 10px;
+}
