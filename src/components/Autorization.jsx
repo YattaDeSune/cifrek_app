@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './autorization.css'
+import styles from '../styles/Autorization.module.scss'
 import {useNavigate} from "react-router-dom";
 
 const Autorization = () => {
@@ -10,7 +10,7 @@ const Autorization = () => {
     const [isValid, setIsValid] = useState(false);
 
     const navigate = useNavigate()
-    const goNext = () => navigate('/code')
+    const handleNavigateAut = () => navigate('/code')
     const blurHandler = (e) => {
         return setEmailDirty(true)
     }
@@ -33,35 +33,24 @@ const Autorization = () => {
     }, [emailError]);
 
     return (
-        <div className='container'>
-            <div className='autorizationContainer'>
+        <div className={styles.container}>
 
-                <div className='text'>Введите вашу почту</div>
+                <div className={styles.text}>Введите вашу почту</div>
 
-                {(emailDirty && emailError) && <div className='textError'>{emailError}</div>}
+                {(emailDirty && emailError) && <div className={styles.textError}>{emailError}</div>}
                 <input
                     type="text"
-                    className='inputMail'
+                    className={styles.inputMail}
                     placeholder="Ваш email"
                     onBlur={ e => blurHandler(e)}
                     value={email}
                     onChange={ e => EmailHandler(e)}
                 />
 
-                <button className='getCodeBtn' onClick={goNext} disabled={!isValid}>
-                        <span className='textBtn'>Получить код</span>
+                <button className={styles.getCodeBtn} onClick={handleNavigateAut} disabled={!isValid}>
+                    Получить код
                 </button>
 
-            </div>
-            <div className='footer'>
-                <div className='line'>
-
-                    <svg width="161" height="6" viewBox="0 0 161 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="3" y1="3" x2="158" y2="3" stroke="black" stroke-width="6" stroke-linecap="round"/>
-                    </svg>
-
-                </div>
-            </div>
         </div>
     );
 };
