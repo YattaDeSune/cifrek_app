@@ -32,7 +32,6 @@ const ScheduleBody = () => {
                 {weekDays.map((day, index) => (
                     <Link
                         to={`/schedule/${index + 1}`}
-                        key={index}
                         onClick={() => setActiveLink(index)}
                     >
                         <DateIcon dayOfWeek={day} className={index === activeLink ? stylesAct.iconActive : stylesAct.icon}/>
@@ -43,9 +42,8 @@ const ScheduleBody = () => {
             <Routes>
                 {weekDays.map((day, index) => (
                     <Route
-                        key={index}
                         path={`${index + 1}`}
-                        element={<div className={styles.date}>{getDayName(index)}, {format(day, 'd MMMM', { locale: ru })}</div>}
+                        element={<div className={styles.date}>{getDayName(index + 1)}, {format(day, 'd MMMM', { locale: ru })}</div>}
                     />
                 ))}
             </Routes>
@@ -53,6 +51,7 @@ const ScheduleBody = () => {
             <div className={styles.scheduleContainer}>
 
                 <Routes>
+                    <Route path='' element={<b><p style={{textAlign: "center"}}> Выберите нужную дату</p></b>} />
                     {weekDays.slice(0, 5).map((day, index) => (
                         <Route
                             key={index}
