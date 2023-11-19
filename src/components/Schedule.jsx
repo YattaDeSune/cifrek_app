@@ -1,6 +1,7 @@
 import React from 'react';
 import {Tabs} from "./Tabs";
 import {Header} from "./Header";
+import {ScheduleBody} from "./ScheduleBody";
 
 const Schedule = () => {
 
@@ -8,7 +9,7 @@ const Schedule = () => {
         <div>
 
             <Header name={"Расписание"} />
-            <p>расписание</p>
+            <ScheduleBody />
             <Tabs schedule={true} electives={false} rating={false} teachers={false} profile={false}/>
 
         </div>

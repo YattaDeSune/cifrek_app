@@ -1,4 +1,4 @@
-// import {Loader} from "./components/Loader";
+import {Loader} from "./components/Loader";
 import {GetCodePage} from "./components/GetCodePage";
 import { Routes, Link, Route} from "react-router-dom";
 import {Autorization} from "./components/Autorization";
@@ -16,12 +16,19 @@ function App() {
         <Routes>
             <Route path='/' element={<Autorization />} />
             <Route path='/code' element={<GetCodePage />} />
-            <Route path='/schedule' element={<Schedule />} />
             <Route path='/electives' element={<Electives />} />
+            <Route path='/schedule/*' element={<Schedule />}>
+                <Route path='1' element={<Schedule />} />
+                <Route path='2' element={<Schedule />} />
+                <Route path='3' element={<Schedule />} />
+                <Route path='4' element={<Schedule />} />
+                <Route path='5' element={<Schedule />} />
+                <Route path='6' element={<Schedule />} />
+            </Route>
             <Route path='/rating' element={<Rating />} />
             <Route path='/teachers' element={<Teachers />} />
             <Route path='/profile' element={<Profile />} />
-            {/*<Route path='/loader' element={<Loader />} />*/}
+            <Route path='/loader' element={<Loader />} />
         </Routes>
     );
 }

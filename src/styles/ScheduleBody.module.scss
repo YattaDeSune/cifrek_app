@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 83.5vh;
+  width: 100vw;
+  background: #E9E9E9;
+  position: fixed;
+  bottom: 9.5vh;
+}
+
+.dateContainer {
+  margin-top: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  height: 8vh;
+  flex-shrink: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.date {
+  width: 85vw;
+  margin-top: 3vh;
+  flex-shrink: 0;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.scheduleContainer {
+  width: 85vw;
+  height: 85vh;
+  overflow: auto;
+}
